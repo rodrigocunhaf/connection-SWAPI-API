@@ -66,7 +66,6 @@ const  Navigation = (props) => {
         return setIsVisible(false);
     };
 
-
     return (
         <nav className={style.container}  >
             <div>

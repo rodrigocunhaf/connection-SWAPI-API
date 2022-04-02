@@ -6,14 +6,20 @@ import starshipIcon from "../../assets/icons/starships.png";
 
 const Main = ( props) => {
 
+
+    if (document.querySelector(`.${style.list}`)){
+        document.querySelector(`.${style.list}`).scrollTo(0,0);
+    };
+    
+
     return (
         <div className={style.container}>
             <div  className={style.box}>
-                <ul className={ props.items.data.length === 0  && style.opacity}>
+                <ul className={ ( props.items.data.length === 0  && style.opacity) || style.list}>
                     {
-                        props.items.data.map( mock => {
+                        props.items.data.map( (mock, index) => {
                             return (
-                                <li className={style.boxItem}>                              
+                                <li key={index} className={style.boxItem}>                              
                                     <div className={style.boxImage}>
                                     { props.items.type === "PEOPLES" && <img src={cardIcon} className={style.cardIcon} alt="people icon"></img> }
                                     { props.items.type === "PLANETS" && <img src={planetIcon} className={style.cardIcon} alt="planet icon"></img> }

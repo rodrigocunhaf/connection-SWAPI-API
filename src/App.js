@@ -16,6 +16,7 @@ function App() {
     });
   };
 
+
   return (
     <React.Fragment>
         <Header setVisibleItems={setVisibleItems}/>
