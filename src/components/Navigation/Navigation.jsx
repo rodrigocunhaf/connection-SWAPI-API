@@ -60,7 +60,7 @@ const  Navigation = (props) => {
     };
 
     const openNavigation = ( ) => {
-        return setIsVisible(true);
+        return setIsVisible(!isVisible);
     };
     const closeNavigation = ( ) => {
         return setIsVisible(false);
@@ -72,7 +72,7 @@ const  Navigation = (props) => {
             <div>
                 <div className={style.box} onMouseEnter={openNavigation}>
                     <LoadingPortal isLoading={isLoading}/>
-                    <button   className={style.menuButton} tabIndex={0}><img src={menuIcon} alt="menu icon"/></button>
+                    <button   className={style.menuButton} onClick={openNavigation}> <img src={menuIcon} alt="menu icon"/></button>
                     <ul  onMouseLeave={closeNavigation}  className={style.buttonList} style={{display: (!isVisible && 'none') || ' '}}>
                         <li><button  onClick={getPeoples}>Peoples</button></li>
                         <li><button  onClick={getStarships}>Starships</button></li>
