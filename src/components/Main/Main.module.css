@@ -1,0 +1,114 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    
+}
+
+.container .box{
+    max-width: 1920px;
+    background-image: url("../../assets/background/people-backgrounds.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-height: 740px;
+}
+
+
+.container  ul {
+    max-width:1100px;
+    width: 100%;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.877);
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+
+
+.opacity{
+    opacity: 0;
+}
+
+.container li{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 330px;
+    background-color: #d3d3d3;
+    max-width: 200px;
+    margin: 10px;
+    border-radius: 25px;
+    animation-name: animationCard;
+    animation-duration:1.2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.cardIcon{
+    max-width: 100%;
+}
+
+.container .name{
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    max-width: 150px;
+    font-size: 18px;
+    padding: 4px;
+    margin: 20px auto;
+    text-align: center;
+    overflow: hidden;
+    font-weight: bold;
+    background-color: black;
+    font-family: 'Space Mono', monospace;
+}
+
+.container .boxImage{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+
+@keyframes animationCard{
+    0% { 
+        box-shadow: 0 0 7px 2px aliceblue;
+    }
+    100% {
+        box-shadow: 0 0 7px 2px rgb(68, 68, 223);
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .container  ul {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        padding-bottom: 10px;
+        max-width: 631px;
+        
+    }
+    .container .box{
+        min-height: calc(100vh - 26vh);
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:425px) {
+
+    .container  ul {
+        width: 49%;
+    }
+}
+
+@media screen and (max-width:360px) {
+
+    .container  ul {
+        width: 58%;
+    }
+}

@@ -1,0 +1,40 @@
+.container{
+    background-color: rgba(0, 0, 0, 0.178);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box{
+    width: 400px;
+    height: 200px;
+    background-color: rgb(219, 219, 219);
+    margin-bottom: 150px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.box img{
+    max-width: 150px;
+}
+
+.box p{
+    color: black;
+    font-size: 30px;
+    margin: 0;
+}
+
+.displayNone{
+    display: none;
+}
