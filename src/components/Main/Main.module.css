@@ -104,6 +104,10 @@
     .container  ul {
         width: 49%;
     }
+
+    .container .box{
+        min-height: calc(100vh - 25vh);
+    }
 }
 
 @media screen and (max-width:360px) {

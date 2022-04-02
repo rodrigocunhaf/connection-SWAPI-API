@@ -17,7 +17,7 @@
 @media screen and (max-width:768px) {
     
     .container{
-        height: calc(100vh - 83vh);
+        min-height: calc(100vh - 83vh);
     }
 }
 
